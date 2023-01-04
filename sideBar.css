@@ -43,7 +43,7 @@ nav {
 
 .logo span {
             font-weight: bold;
-            padding-left: 10px;
+            padding-left: 3px;
             font-size: 18px;
             text-transform: uppercase;
             text-align: center;
@@ -54,7 +54,7 @@ a {
             color: rgba(83, 83, 83);
             font-size: 14px;
             display: table;
-            width: 300px;
+            width: 350px;
 }
 
 .fas {
@@ -69,15 +69,13 @@ a {
 .nav-item {
             position: relative;
             top: 12px;
-            margin-left: 10px;
+            margin-left: 5px;
 }
 
 a:hover {
             background: #eee;
 }
 
-nav:hover {
-
-            width: 280px;
-            transition: all 0.5s ease;
+.page {
+            background-color: rgb(246, 247, 242);
 }
