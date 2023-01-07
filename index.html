@@ -19,6 +19,14 @@
                 <p w3-include-html="sideBar.html"></p>
                 <script>   w3.includeHTML(); </script>
 
+                <script type="text/javascript">
+                        $(document).ready(function () {
+                                $('.nav_btn').click(function () {
+                                        $('.mobile_nav_items').toggleClass('active');
+                                });
+                        });
+                </script>
+
                 <div class="content">
                         <div class="card">
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining

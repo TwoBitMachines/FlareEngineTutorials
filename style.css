@@ -160,7 +160,7 @@ label #sidebar_btn:hover {
 }
 
 /* Responsive CSS */
-@media screen and (max-width: 475px) {
+/* @media screen and (max-width: 475px) {
 
             .right_area {
                         display: none;
@@ -169,7 +169,7 @@ label #sidebar_btn:hover {
             .left_area {
                         font-size: 12px;
             }
-}
+} */
 
 @media screen and (max-width: 780px) {
             .sidebar {
@@ -252,12 +252,4 @@ label #sidebar_btn:hover {
             .active {
                         display: block;
             }
-}
-
-
-
-.imageBorder {
-
-            border: #222;
-            align-self: center;
 }
