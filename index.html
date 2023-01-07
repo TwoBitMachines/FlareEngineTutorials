@@ -16,16 +16,11 @@
 
         <body>
 
+                <input type="checkbox" id="check">
                 <p w3-include-html="sideBar.html"></p>
                 <script>   w3.includeHTML(); </script>
 
-                <script type="text/javascript">
-                        $(document).ready(function () {
-                                $('.nav_btn').click(function () {
-                                        $('.mobile_nav_items').toggleClass('active');
-                                });
-                        });
-                </script>
+
 
                 <div class="content">
                         <div class="card">
@@ -42,7 +37,13 @@
                         </div>
                 </div>
 
-
+                <script type="text/javascript">
+                        $(document).ready(function () {
+                                $('.nav_btn').click(function () {
+                                        $('.mobile_nav_items').toggleClass('active');
+                                });
+                        });
+                </script>
 
         </body>
 
