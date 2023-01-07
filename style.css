@@ -252,3 +252,11 @@ label #sidebar_btn:hover {
                         display: block;
             }
 }
+
+
+
+.imageBorder {
+
+            border: #222;
+            align-self: center;
+}
