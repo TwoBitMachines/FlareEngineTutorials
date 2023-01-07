@@ -1,34 +1,53 @@
-<body>
-    <p> hello world</p>
-    <nav>
-        <ul>
-            <li>
-                <a href="" class="logo"><img src="assets/flare.png"> <span class="nav-item"> Home </span> </a>
-            </li>
+<input type="checkbox" id="check">
+<!--header area start-->
+<header>
+    <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+    </label>
+    <div class="left_area">
+        <h3>Flare Engine<span> Tutorials</span></h3>
+    </div>
+    <div class="right_area">
+        <a href="#" class="buy_btn">Buy</a>
+    </div>
+</header>
 
-            <li><a href="tutorials/unlockAbility.html"><i class="fas fa-share"></i><span class="nav-item"> Unlock Ability </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 2 </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 3 </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 4 </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 5 </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 6 </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 7 </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 7 </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 7 </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 7 </span> </a></li>
+<!--mobile navigation bar start-->
+<div class="mobile_nav">
+    <div class="nav_bar">
+        <img src="assets/flare.png" class="mobile_logo" alt="">
+        <i class="fa fa-bars nav_btn"></i>
+    </div>
+    <div class="mobile_nav_items">
+        <a href="#" class="listItem"><span>Tutorial 1</span></a>
+        <a href="#" class="listItem"><span>Tutorial 1</span></a>
+        <a href="#" class="listItem"><span>Tutorial 1</span></a>
+        <a href="#" class="listItem"><span>Tutorial 1</span></a>
+        <a href="#" class="listItem"><span>Tutorial 1</span></a>
+        <a href="#" class="listItem"><span>Tutorial 1</span></a>
+        <a href="#" class="listItem"><span>Tutorial 1</span></a>
+    </div>
+</div>
 
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 7 </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 7 </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 7 </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 7 </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 22 </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 44</span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 1 </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 23 </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial wew </span> </a></li>
-            <li><a href="#"><i class="fas fa-share"></i><span class="nav-item"> Tutorial 11 </span> </a></li>
+<!--sidebar start-->
+<div class="sidebar">
+    <div class="logoArea">
+        <a href="#"> <img src="assets/flare.png" class="logo" alt=""></a>
+    </div>
+    <a href="#" class="listItem"><span>Tutorial 1</span></a>
+    <a href="#" class="listItem"><span>Tutorial 1</span></a>
+    <a href="#" class="listItem"><span>Tutorial 1</span></a>
+    <a href="#" class="listItem"><span>Tutorial 1</span></a>
+    <a href="#" class="listItem"><span>Tutorial 1</span></a>
+    <a href="#" class="listItem"><span>Tutorial 1</span></a>
+    <a href="#" class="listItem"><span>Tutorial 1</span></a>
+</div>
+<!--sidebar end-->
 
-        </ul>
-    </nav>
-
-</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.nav_btn').click(function () {
+            $('.mobile_nav_items').toggleClass('active');
+        });
+    });
+</script>
