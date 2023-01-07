@@ -7,7 +7,7 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Flare Engine Tutorials</title>
 
-                <base href="https://twobitmachines.github.io/FlareEngineTutorials/" target="_blank">
+                <base href="https://twobitmachines.github.io/FlareEngineTutorials/" target="_self">
                 <link rel="stylesheet" href="style.css">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
                 <script src="https://www.w3schools.com/lib/w3.js"></script>
@@ -15,33 +15,34 @@
         </head>
 
         <body>
+                <div class="content">
+                        <p w3-include-html="sideBar.html"></p>
+                        <script>   w3.includeHTML(); </script>
 
-                <p w3-include-html="sideBar.html"></p>
-                <script>   w3.includeHTML(); </script>
+                        <h2> Unlock Ability</h2>
 
-                <h2> Unlock Ability</h2>
+                        <p>
+                                In certain games, the player must find and unlock new abilities in order to progress
+                                through the game. These abilities are often obtained by completing certain tasks or finding
+                                hidden items, and they allow the player to access new areas and defeat tougher enemies.
+                        </p>
 
-                <p>
-                        In certain games, the player must find and unlock new abilities in order to progress
-                        through the game. These abilities are often obtained by completing certain tasks or finding
-                        hidden items, and they allow the player to access new areas and defeat tougher enemies.
-                </p>
+                        <p>
+                                In this tutorial, we will set up the foundation for unlocking abilities in the game.
+                                Initially, the player will have a limited set of abilities and eventually gain more as the
+                                game progress. Once an ability is unlocked, the ability must remain unlocked throughout the
+                                lifespan of the game, regardless of game level or wether the game is turned off. The
+                                <b>WorldBool</b> component will be crucial for this to work.
+                        </p>
 
-                <p>
-                        In this tutorial, we will set up the foundation for unlocking abilities in the game.
-                        Initially, the player will have a limited set of abilities and eventually gain more as the
-                        game progress. Once an ability is unlocked, the ability must remain unlocked throughout the
-                        lifespan of the game, regardless of game level or wether the game is turned off. The
-                        <b>WorldBool</b> component will be crucial for this to work.
-                </p>
+                        <h4> The Setup</h4>
 
-                <h4> The Setup</h4>
+                        <p>
+                                In your player controller, add the WorldBool component.
+                        </p>
 
-                <p>
-                        In your player controller, add the WorldBool component.
-                </p>
-
-                <img src="assets/unlockAbility.png" class="imageBorder" alt="">
+                        <img src="assets/unlockAbility.png" class="imageBorder" alt="">
+                </div>
 
         </body>
 
