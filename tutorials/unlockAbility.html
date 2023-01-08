@@ -21,47 +21,48 @@
                         $("#container").load("sideBar.html");
                 </script>
 
-                <h2> Unlock Ability</h2>
 
-                <p>
-                        In certain games, the player must find and unlock new abilities in order to progress
-                        through the game. These abilities are often obtained by completing certain tasks or finding
-                        hidden items, and they allow the player to access new areas and defeat tougher enemies.
-                </p>
+                <div class="content">
+                        <h2> Unlock Ability</h2>
 
-                <p>
-                        In this tutorial, we will set up the foundation for unlocking abilities in the game.
-                        Initially, the player will have a limited set of abilities and eventually gain more as the
-                        game progress. Once an ability is unlocked, the ability must remain unlocked throughout the
-                        lifespan of the game, regardless of game level or wether the game is turned off. The
-                        <b>WorldBool</b> component will be crucial for this to work.
-                </p>
+                        <p>
+                                In certain games, the player must find and unlock new abilities in order to progress
+                                through the game. These abilities are often obtained by completing certain tasks or finding
+                                hidden items, and they allow the player to access new areas and defeat tougher enemies.
+                        </p>
 
-                <h4> The Setup</h4>
+                        <p>
+                                In this tutorial, we will set up the foundation for unlocking abilities in the game.
+                                Initially, the player will have a limited set of abilities and eventually gain more as the
+                                game progress. Once an ability is unlocked, the ability must remain unlocked throughout the
+                                lifespan of the game, regardless of game level or wether the game is turned off. The
+                                <b>WorldBool</b> component will be crucial for this to work.
+                        </p>
 
-                <p>
-                        In your player controller, add the WorldBool component.
-                </p>
+                        <h4> The Setup</h4>
 
-                <img src="assets/unlockAbility.png" class="imageBorder" alt="">
+                        <p>
+                                In your player controller, add the WorldBool component.
+                        </p>
 
-                <p>
-                        The WorldBool is used for saving. In order for this to save correctly, give the Name ID
-                        a unique name. Initialize its Value to false. Enable the Save option (reminder: click the
-                        trash icon to clear any saved data).
-                </p>
-                <p>
-                        Now, the On Load Condition events is where the real magic happens. We will take advantage
-                        of the fact that each ability can be paused and unpaused, and we can call the Pause method on the ability to set
-                        this state.You will need to drag and drop the player object into each event, look for the Jump
-                        Ability, and choose the Pause method. At the beginning of the scene, Load Condition True t will be called if
-                        the WorldBool Value is True, and this will set the Pause method to False, which will
-                        unpause (or unlock) the ability. For Load Condition False, this event will be called if
-                        the WorldBool Value is False. And this will set the Pause method to True, which will pause the ability.
+                        <img src="assets/unlockAbility.png" class="imageBorder" alt="">
 
-                </p>
+                        <p>
+                                The WorldBool is used for saving. In order for this to save correctly, give the Name ID
+                                a unique name. Initialize its Value to false. Enable the Save option (reminder: click the
+                                trash icon to clear any saved data).
+                        </p>
+                        <p>
+                                Now, the On Load Condition events is where the real magic happens. We will take advantage
+                                of the fact that each ability can be paused and unpaused, and we can call the Pause method on the ability to set
+                                this state.You will need to drag and drop the player object into each event, look for the Jump
+                                Ability, and choose the Pause method. At the beginning of the scene, Load Condition True t will be called if
+                                the WorldBool Value is True, and this will set the Pause method to False, which will
+                                unpause (or unlock) the ability. For Load Condition False, this event will be called if
+                                the WorldBool Value is False. And this will set the Pause method to True, which will pause the ability.
+
+                        </p>
                 </div>
-
         </body>
 
 </html>
