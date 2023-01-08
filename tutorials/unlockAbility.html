@@ -15,9 +15,12 @@
         </head>
 
         <body>
+
+                <p w3-include-html="sideBar.html"></p>
+                <script>   w3.includeHTML(); </script>
+
                 <div class="content">
-                        <p w3-include-html="sideBar.html"></p>
-                        <script>   w3.includeHTML(); </script>
+
 
 
 
@@ -47,11 +50,18 @@
 
                         <p>
                                 The WorldBool is used for saving. In order for this to save correctly, give the Name ID
-                                a relevant and unique name. Initialize its Value to false. Enable the Save option
-                                (reminder: click the trash icon to clear the saved data).
+                                a unique name. Initialize its Value to false. Enable the Save option (reminder: click the
+                                trash icon to clear any saved data).
+                        </p>
+                        <p>
+                                Now, the On Load Condition events is where the real magic happens. We will take advantage
+                                of the fact that each ability can be paused and unpaused, and we can call the Pause method on the ability to set
+                                this state.You will need to drag and drop the player object into each event, look for the Jump
+                                Ability, and choose the Pause method. At the beginning of the scene, Load Condition True t will be called if
+                                the WorldBool Value is True, and this will set the Pause method to False, which will
+                                unpause (or unlock) the ability. For Load Condition False, this event will be called if
+                                the WorldBool Value is False. And this will set the Pause method to True, which will pause the ability.
 
-                                Now, the On Load Condition events is where the real magic happens. You will need to drag
-                                and drop the player object into each event. For Load Condition True
                         </p>
                 </div>
 
