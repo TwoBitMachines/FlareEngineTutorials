@@ -147,6 +147,18 @@
              font-family: "Sofia Sans Semi Condensed", sans-serif;
  }
 
+ .content .horizontal {
+             max-width: 620px;
+ }
+
+
+ .content img {
+             display: block;
+             margin-left: auto;
+             margin-right: auto;
+             border: 2px solid #3f3f3f;
+ }
+
  #check:checked~.content {
              margin-left: 60px;
  }
@@ -264,4 +276,38 @@
              .active {
                          display: block;
              }
+ }
+
+
+ .noteBoxes {
+             border: 1px solid;
+             border-radius: 5px;
+             padding: 10px;
+             margin: 0px 0;
+             width: 600px;
+ }
+
+ .type1 {
+             border-color: #E76F51;
+             background-color: rgba(231, 111, 81, 0.25);
+ }
+
+ .type2 {
+             border-color: #70f377;
+             background-color: rgba(91, 194, 113, 0.25);
+ }
+
+ .type3 {
+             border-color: #0096C7;
+             background-color: rgba(0, 150, 199, 0.25);
+ }
+
+ .type4 {
+             border-color: #00B353;
+             background-color: rgba(0, 179, 83, 0.25);
+ }
+
+ .picture {
+             width: 15px;
+             padding-right: 10px;
  }

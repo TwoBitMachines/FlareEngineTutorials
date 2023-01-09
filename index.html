@@ -29,42 +29,76 @@
                         <p>
                                 In certain games, the player must find and unlock new abilities in order to progress
                                 through the game. These abilities are often obtained by completing certain tasks or finding
-                                hidden items, and they allow the player to access new areas and defeat tougher enemies.
+                                hidden items.
                         </p>
 
                         <p>
-                                In this tutorial, we will set up the foundation for unlocking abilities in the game.
-                                Initially, the player will have a limited set of abilities and eventually gain more as the
-                                game progress. Once an ability is unlocked, the ability must remain unlocked throughout the
-                                lifespan of the game, regardless of game level or wether the game is turned off. The
-                                <b>WorldBool</b> component will be crucial for this to work.
+                                In this tutorial, we will set up the foundation for unlocking abilities. Once an ability is
+                                unlocked, the ability must remain unlocked throughout the lifespan of the game. The <b>WorldBool</b>
+                                component will be crucial for this to work.
                         </p>
 
                         <p>
                                 In your player controller, add the WorldBool component.
                         </p>
 
-                        <img src="assets/unlockAbility.png" class="imageBorder" alt="">
+                        <div class="horizontal">
+                                <img src="assets/unlockAbility.png" class="imageBorder" alt="">
+                        </div>
 
                         <p>
-                                The WorldBool is used for saving. In order for this to save correctly, give the Name ID
-                                a unique name. Initialize its Value to false. Enable the Save option (reminder: click the
-                                trash icon to clear any saved data during development).
+                                The WorldBool is used for saving. In order for this to save correctly, enabled the Save option,
+                                give the Name ID a unique name, and initialize its Value to false. You can also clear any saved
+                                data by pressing the trash icon located in the Save section.
                         </p>
                         <p>
-                                Now, the On Load Condition events is where the real magic happens. We will take advantage
-                                of the fact that each ability can be paused and unpaused, and we can call the Pause method on any
-                                ability to set this state.You will need to drag and drop the player object into each event,
-                                look for the Jump Ability, and select the Pause method.
+                                We will take advantage of the fact that each ability can be paused, and calling the Pause
+                                method on any ability will set this state. Drag and drop the player object into each On Load event,
+                                choose the Jump Ability for example, and select the Pause method. This can, of course, be applied
+                                to any ability. It can also be applied to the FireArm and Melee classes (on the next Flare update, 1.7.2).
+                        </p>
+                        <p>
+                                Anytime the game begins, the On Load Condition True will be called if the WorldBool Value is True, and
+                                this will set the Pause method to False, which will unpause (or unlock) the ability. For Load Condition False,
+                                this event will be called if the WorldBool Value is False, and this will set the Pause method to
+                                True, which will pause the ability.
+                        </p>
+                        <div class="horizontal">
+                                <img src="assets/unlockDoubleJump.png" class="imageBorder" alt="">
+                        </div>
 
-                                When the game begins, the Load
-                                Condition True will be called if the WorldBool Value is True, and this will set the Pause
-                                method to False, which will unpause (or unlock) the ability. For Load Condition False, this
-                                event will be called if the WorldBool Value is False. And this will set the Pause method to
-                                True, which will pause the ability 33.
+                        <p>
+                                This example shows how to unlock the double jump ability. Since the double jump exists
+                                within the Jump Ability, it can't use the Pause method. Instead, we set the number of air jumps directly
+                                by calling the SetAirJump method.
                         </p>
 
+                        <p class="noteBoxes type2">
+                                Tip: if you have too many abilities to unlock, you can place as many WorldBool components on a separate
+                                game object to organize. These can be placed anywhere.
+                        </p>
 
+                        <p>
+                                Now, the only thing that remains is to set the WorldBool's Value to True. The scenario in which this happens
+                                will be highly dependent on each game. It can be done through AI or by picking up an Item. The important
+                                part is to call the SetTrue method on the WorldBool. It's also very important that you call the ability
+                                you want to unlock simultaneously, or else the ability won't activate until the scene resets.
+                        </p>
+
+                        <div class="horizontal">
+                                <img src="assets/unlockDoubleJump.gif" class="imageBorder" alt="">
+                        </div>
+
+                        <p>
+                                In the example above, I created a simple AIFSM that unlocks the player's double jump as soon as the
+                                player enters the territory. If you exit and enter playmode again, you'll be able to double jump immediately.
+                                Check out the image below to see how I set up the AIFSM. If you are working with AIFSM for the first time,
+                                please refer to the docs or youtube tutorials for more information.
+                        </p>
+
+                        <div class="horizontal">
+                                <img src="assets/unlockAIFSM.png" class="imageBorder" alt="">
+                        </div>
                 </div>
 
 
