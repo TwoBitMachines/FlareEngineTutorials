@@ -53,8 +53,12 @@
                         </p>
                         <p>
                                 We will take advantage of the fact that each ability can be paused, and calling the Pause
-                                method on any ability will set this state. Drag and drop the player object into each On Load event,
-                                choose the Jump Ability for example, and select the Pause method. This can, of course, be applied
+                                method on any ability will set this state. For convenience, press the pause icon (which will turn red)
+                                on any ability to pause it.
+                        </p>
+                        <p>
+                                Drag and drop the player object into each On Load event,
+                                choose the Jump Ability for example, and select the Pause method. This can be applied
                                 to any ability. It can also be applied to the FireArm and Melee classes (on the next Flare update, 1.7.2).
                         </p>
                         <p>
@@ -75,7 +79,7 @@
 
                         <p class="noteBoxes type2">
                                 Tip: if you have too many abilities to unlock, you can place as many WorldBool components on a separate
-                                game object to organize. These can be placed anywhere.
+                                game object to organize.
                         </p>
 
                         <p>
@@ -90,8 +94,8 @@
                         </div>
 
                         <p>
-                                In the example above, I created a simple AIFSM that unlocks the player's double jump as soon as the
-                                player enters the territory. If you exit and enter playmode again, you'll be able to double jump immediately.
+                                In the example above, the player can already jump and I make use of an AIFSM. As soon as the player enters the territory
+                                it will unlock the player's double jump ability. If you exit and enter playmode again, you'll be able to double jump immediately.
                                 Check out the image below to see how I set up the AIFSM. If you are working with AIFSM for the first time,
                                 please refer to the docs or youtube tutorials for more information.
                         </p>
