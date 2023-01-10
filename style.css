@@ -155,7 +155,22 @@
  }
 
  .content hr.solid {
-             border-top: 2px solid rgb(146, 146, 146);
+             border-top: 1px solid rgb(194, 194, 194);
+ }
+
+ .contentFooter {
+             max-width: 620px;
+             margin-top: 0px;
+             padding-top: 20px;
+             padding-left: 80px;
+             padding-right: 80px;
+             padding-bottom: 50px;
+             margin-left: 250px;
+             background-position: center;
+             background-color: #f7f6f3;
+             background-size: cover;
+             height: 100%;
+             transition: 0.5s;
  }
 
  #check:checked~.content {
