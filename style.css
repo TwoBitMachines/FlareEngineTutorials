@@ -17,6 +17,14 @@
              height: 30px;
  }
 
+ .home i {
+             color: #22242A;
+ }
+
+ .home span {
+             color: #22242A;
+ }
+
  .navBar {
              list-style-type: none;
              /* margin: 0; */
