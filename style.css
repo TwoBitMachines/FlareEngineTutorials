@@ -11,7 +11,10 @@
              position: fixed;
              background: #22242A;
              margin-left: 0;
-             padding: 20px;
+             padding-left: 0px;
+             padding-right: 20px;
+             padding-top: 5px;
+             padding-bottom: 25px;
              width: calc(100% - 0%);
              top: 0;
              height: 30px;
@@ -27,11 +30,13 @@
 
  .navBar {
              list-style-type: none;
-             /* margin: 0; */
-             margin-right: 50px;
-             padding: 0;
+
+             margin-right: 20px;
+             margin-left: 0;
+             padding-left: 20px;
              overflow: hidden;
  }
+
 
  .navBar li {
              float: right;
