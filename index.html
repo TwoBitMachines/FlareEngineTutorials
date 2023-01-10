@@ -22,95 +22,26 @@
                 </script>
 
 
-
-
-
                 <div class="content">
 
-                        <div class="home">
-                                <a href="#"><i class="fas fa-home"></i><span> Home</span></a>
-                        </div>
+
                         <br>
 
                         <hr class="solid">
 
-                        <h2> Unlock Ability</h2>
+                        <h2> Home </h2>
 
                         <p>
-                                In certain games, the player must find and unlock new abilities in order to progress
-                                through the game. These abilities are often obtained by completing certain tasks or finding
-                                hidden items.
-                        </p>
-
-                        <p>
-                                This tutorial will show you how to set up the foundation for unlocking abilities. It is important
-                                that once an ability is unlocked, it remains unlocked throughout the lifespan of the game.
-                                The WorldBool component is crucial for this to work.
-                        </p>
-
-                        <p>
-                                To get started, add the WorldBool component to your player controller.
-                        </p>
-
-                        <div>
-                                <img src="assets/unlockAbility.png" class="imageBorder" alt="">
-                        </div>
-
-                        <p>
-                                The WorldBool component is used for saving. To use it correctly, enable the Save option,
-                                give it a unique Name ID, and initialize its Value to false. You can also clear any saved
-                                data by pressing the trash icon in the Save section.
+                                Hello there! Welcome to Flare Engine Tutorials. This is where I'll post user requested tutorials for Flare,
+                                since I am no longer making YouTube tutorials. If you want to request a tutorial, please head over to the
+                                Discord and let me know!
                         </p>
                         <p>
-                                We can use the fact that each ability can be paused by calling the Pause method on it. For
-                                convenience, you can press the pause icon (which will turn red) to pause an ability.
-                        </p>
-                        <p>
-                                To apply this to the Jump Ability, for example, drag and drop the player object into each
-                                On Load event and select the Pause method. This can be applied to any ability, as well as the
-                                FireArm and Melee classes (in the upcoming Flare update, 1.7.2).
-                        </p>
-                        <p>
-                                When the game starts, the On Load Condition True event will be called if the Value is
-                                True, and this will set the Pause method to False, which will unlock the ability. Otherwise,
-                                the On Load Condition False event will be called and the Pause method will be set
-                                to True, which will pause the ability.
-                        </p>
-                        <div class="horizontal">
-                                <img src="assets/unlockDoubleJump.png" class="imageBorder" alt="">
-                        </div>
-
-                        <p>
-                                This example shows how to unlock the double jump ability. Since the double jump is part of the Jump Ability,
-                                it can't use the Pause method. Instead, we can set the number of air jumps directly by calling the SetAirJump method.
+                                As you can see, it's pretty bare-bones right now, but that will change with time. If you want to support
+                                the development of Flare, these tutorials, and all the user support, please visit my Patreon page. It's not required,
+                                but any support is greatly appreciated. Thank you!
                         </p>
 
-                        <p class="noteBoxes type2">
-                                Tip: If you have a lot of abilities to unlock, you can place multiple WorldBool components on a separate game object
-                                to keep them organized.
-                        </p>
-
-                        <p>
-                                The only thing left to do is set the WorldBool value to True. The specific scenario in which this happens will
-                                depend on your game. It could be triggered by AI or by picking up an Item. <b>The important part is to call the SetTrue
-                                        method on the WorldBool</b>. It's also important to call the ability you want to unlock at the same time, or else
-                                the ability won't activate until the scene resets.
-                        </p>
-
-                        <div class="horizontal">
-                                <img src="assets/unlockDoubleJump.gif" class="imageBorder" alt="">
-                        </div>
-
-                        <p>
-                                In the example above, the player has the jump ability already enabled and I use an AIFSM. When the player enters the territory,
-                                it will unlock the player's double jump ability. If you exit and enter play mode again, you'll be able to double
-                                jump immediately. See the image below to see how I set up the AIFSM. If you are new to AIFSM, refer to the
-                                documentation or YouTube tutorials for more information.
-                        </p>
-
-                        <div class="horizontal">
-                                <img src="assets/unlockAIFSM.png" class="imageBorder" alt="">
-                        </div>
                 </div>
 
 
