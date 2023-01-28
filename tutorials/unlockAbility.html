@@ -69,7 +69,7 @@
                         <p>
                                 To apply this to the Jump Ability, for example, drag and drop the player object into each
                                 On Load event and select the Pause method. This can be applied to any ability, as well as the
-                                FireArm and Melee classes (in the upcoming Flare update, 1.7.2).
+                                FireArm and Melee classes (with Flare 1.7.2).
                         </p>
                         <p>
                                 When the game starts, the On Load Condition True event will be called if the Value is
@@ -77,6 +77,13 @@
                                 the On Load Condition False event will be called and the Pause method will be set
                                 to True, which will pause the ability.
                         </p>
+
+                        <p class="noteBoxes type2">
+                                Important: Since each ability must be unlocked or locked in every scene, this means this setup must
+                                exist in each scene, and each WorldBool must have the exact same settings. Typically, this should
+                                be part of the player prefab.
+                        </p>
+
                         <div class="horizontal">
                                 <img src="assets/unlockDoubleJump.png" class="imageBorder" alt="">
                         </div>
